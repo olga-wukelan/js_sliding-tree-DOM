@@ -6,7 +6,7 @@ const list = document.querySelectorAll('.tree li ul');
 list.forEach((ulElm) => {
   const liElm = ulElm.parentElement;
 
-  const headerTextNode = liElm.firstChild;
+  const headerTextNode = liElm.firstChild.trim();
 
   if (!headerTextNode || headerTextNode.nodeType !== 3) {
     return;
