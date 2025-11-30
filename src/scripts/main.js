@@ -6,7 +6,7 @@ const list = document.querySelectorAll('.tree li ul');
 list.forEach((ulElm) => {
   const liElm = ulElm.parentElement;
 
-  const headerTextNode = liElm.firstChild.trim();
+  const headerTextNode = liElm.firstChild;
 
   if (!headerTextNode || headerTextNode.nodeType !== 3) {
     return;
@@ -14,7 +14,7 @@ list.forEach((ulElm) => {
 
   const createSpan = document.createElement('span');
 
-  createSpan.textContent = headerTextNode.textContent;
+  createSpan.textContent = headerTextNode.textContent.trim();
   createSpan.classList.add('tree-header');
   createSpan.style.cursor = 'pointer';
 
